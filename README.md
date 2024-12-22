@@ -30,27 +30,69 @@ A working version of QMK is required. See https://docs.qmk.fm/#/newbs_getting_st
 
 ### Getting started
 
-Clone this repo into the `qmk_firmware/keyboards/ferris/keymaps/` directory.
+Install Using Homebrew (macOS, some Linux)
+
+```
+brew install qmk/qmk/qmk
+export QMK_HOME='~/qmk_firmware' # Optional, set the location for `qmk_firmware`
+qmk setup  # This will clone `qmk/qmk_firmware` and optionally set up your build environment
+```
+
+By default it will be install to `~/qmk_firmware` folder
+
+Clone this repo into a `gallium-keyboard`
+
+```
+git clone https://github.com/HammerSpb/keyboard.git gallium-keyboard
+```
+
+Create a directory insdide `Ferris/Sweep` keyboard folder
+
+```
+mkdir ~/qmk_firmware/keyboards/ferris/keymaps/gallium-keyboard
+```
+
+Copy content of `gallium-keyboard/qmk` to the `gallium-keyboard` folder
+
+```
+cp -r qmk/* ~/qmk_firmware/keyboards/ferris/keymaps/gallium-keyboard
+```
 
 ### Compiling
 
-After all changes have been made run the following command to create the firmware:
+Now you could compile it
 
 ```
-qmk compile
+qmk compile -kb ferris/sweep -km gallium-keyboard
 ```
+
+After that `qmk` will create `hex`-firmware file in `~/qmk_firmware/` folder with the name `ferris_sweep_gallium-keyboard.hex`
 
 ### Flashing
 
-To flash the board connect it via USB to the computer and run:
+First, you have to install `Qmk Toolbox`
 
 ```
-qmk flash
+brew install qmk-toolbox
 ```
 
-It will poll the keyboard and will flash it when it is in Reset mode. So press the reset button and wait for the flashing of the board.
+To flash the board connect it via USB to the computer (one half) you have to run `QMK Toolbox`
 
-Once the board is flashed, disconnect it from USB, and connect the other half to the computer, and repeat the flashing procedure.
+Click `Open file` button and select `~/qmk_firmware/ferris_sweep_gallium-keyboard.hex`
+
+Make sure your cpu is `ATmega32U4` (I'm using Elite-C controller)
+
+`Short` two small holes at the top of connected half of keyboard to `reset` it.
+
+You will see ready message in the console log of `Qmk Toolbox`
+
+Go to `Tools/EEPROM` and select `Left Half`
+
+Now you could press `Flash`
+
+If everything wnet fine you could disconnect left half and connect right half of the keyboard and repeat the process by `Resetting` first, then selecting `Right Half` in `Tools/EEPROM` menu and then `Flash` it.
+
+Now you could disconnect `right half` and connect full keyboard and start using it.
 
 After both halves are flashed, connect the left half to USB and start typing.
 
@@ -64,4 +106,4 @@ I've included a picture of the keymap. It can be generated from the JSON file of
 qmk c2json
 ```
 
-With this JSON file the SVG can be generated with [Keymap-drawer](https://keymap-drawer.streamlit.app/).
+er.streamlit.app/).
