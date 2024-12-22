@@ -86,7 +86,7 @@ Make sure your cpu is `ATmega32U4` (I'm using Elite-C controller)
 
 You will see ready message in the console log of `Qmk Toolbox`
 
-Go to `Tools/EEPROM` and select `Left Half`
+Go to `Tools/EEPROM` menu and select `Left Half`
 
 Now you could press `Flash`
 
