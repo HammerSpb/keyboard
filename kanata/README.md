@@ -14,7 +14,13 @@ Installation
 
 Quit from `Karabiner-Elements` if you run it!
 
-`sudo ./kanata_macos_arm64 --cfg ~/personal/arsenik/kanata/kanata.kbd --debug`
+Clone this repo
+
+`git clone https://github.com/HammerSpb/keyboard`
+
+Run Kanata with Gallium config
+
+`sudo ./kanata/kanata_macos_arm64 --cfg ./kanata/kanata.kbd --debug`
 
 You should see something like this: 
 
