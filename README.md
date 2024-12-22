@@ -10,7 +10,7 @@ This project contain the files needed to compile the custom keymap for the Ferri
 
 The keymap consists of 3 layers (actually 4). I use home-row mods to get all the Shift, Control, Alt, and GUI action in an easy to reach position.
 
-![alt text](https://github.com/HammerSpb/keyboard/blob/master/image.jpg?raw=true)
+![alt text]("https://github.com/HammerSpb/keyboard/blob/master/my_keymap (2).png?raw=true")
 
 ![keymap layout](keymap.svg)
 
