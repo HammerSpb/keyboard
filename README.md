@@ -95,15 +95,3 @@ If everything wnet fine you could disconnect left half and connect right half of
 Now you could disconnect `right half` and connect full keyboard and start using it.
 
 After both halves are flashed, connect the left half to USB and start typing.
-
-## Misc
-
-### SVG
-
-I've included a picture of the keymap. It can be generated from the JSON file of this keymap. The problem is that this keymap uses custom code, so we don't have a JSON file. The JSON file can be generated with:
-
-```
-qmk c2json
-```
-
-er.streamlit.app/).
