@@ -6,11 +6,11 @@ My Gallium keyboard layout for Ferris Sweep and ANSI!
 
 This project contain the files needed to compile the custom keymap for the Ferris Sweep.
 
-## Keymap (TODO)
+## Keymap
 
 The keymap consists of 3 layers (actually 4). I use home-row mods to get all the Shift, Control, Alt, and GUI action in an easy to reach position.
 
-![keymap layout](keymap.svg)
+![alt text](keymap_layout.png)
 
 ### Layer 0 (TODO)
 
